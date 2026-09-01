@@ -9,12 +9,9 @@ export default function Header() {
   };
 
   const links = [
-    { nome: "Início", destino: "#inicio" },
-    { nome: "Sobre nós", destino: "#sobre" },
-    { nome: "Serviços", destino: "#servicos" },
-    { nome: "Momentos", destino: "#portfolio" },
-    { nome: "Avaliações", destino: "#avaliacoes" },
-    { nome: "Contato", destino: "#contato" },
+    { nome: "Início", destino: "/home" },
+    { nome: "Sobre nós", destino: "/sobre" },
+    { nome: "Contato", destino: "/contato" },
   ];
 
   return (
@@ -83,7 +80,7 @@ export default function Header() {
 
           {/* BOTÃO */}
           <a
-            href="#contato"
+            href="/contato"
             className="
               hidden md:inline-flex
               items-center
@@ -156,7 +153,7 @@ export default function Header() {
               ))}
 
               <a
-                href="#contato"
+                href="/contato"
                 onClick={fecharMenu}
                 className="
                   mt-2
