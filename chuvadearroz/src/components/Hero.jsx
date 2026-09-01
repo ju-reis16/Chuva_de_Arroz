@@ -1,72 +1,256 @@
+import { FaArrowRight, FaHeart } from "react-icons/fa";
+
 export default function Hero() {
   return (
     <section
-      id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-[#F8FBF8] pt-32"
+      id="inicio"
+      className="
+        min-h-screen
+        pt-32 pb-20
+        bg-[#F8FAF7]
+        relative
+        overflow-hidden
+        flex items-center
+      "
     >
-      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#A8C3A0]/25 blur-[120px]" />
-      <div className="absolute -bottom-40 -left-40 w-[450px] h-[450px] rounded-full bg-[#DCE9DF]/40 blur-[120px]" />
+      {/* Decorações */}
+      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#DCE9DF]/70 rounded-full blur-3xl" />
 
-      <div className="relative max-w-6xl mx-auto px-6 w-full">
+      <div className="absolute -bottom-40 -left-40 w-[450px] h-[450px] bg-[#BFD4C8]/40 rounded-full blur-3xl" />
+
+      <div className="relative max-w-7xl mx-auto px-6 w-full">
+
         <div className="grid lg:grid-cols-2 gap-14 items-center">
 
+          {/* TEXTO */}
           <div className="max-w-xl">
-            <span className="inline-flex px-4 py-2 rounded-full bg-[#EAF3ED] border border-[#C9DED1] text-[#2E6B55] text-sm mb-7">
-              ✦ Casamentos feitos para serem inesquecíveis
-            </span>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl leading-[1.05] font-serif text-[#173C30] mb-7">
-              Seu momento.
-              <br />
-              <span className="text-[#2E6B55] italic">
-                Do seu jeito.
+            <div
+              className="
+                inline-flex
+                items-center
+                gap-2
+                px-4 py-2
+                rounded-full
+                bg-white
+                border border-[#D8E4DD]
+                text-[#315C4A]
+                text-sm
+                mb-7
+                shadow-sm
+              "
+            >
+              <FaHeart className="text-[#315C4A] text-xs" />
+              Assessoria & Cerimonial
+            </div>
+
+            <h1
+              className="
+                text-5xl
+                md:text-6xl
+                lg:text-7xl
+                font-serif
+                text-[#173C30]
+                leading-[1.05]
+                mb-7
+              "
+            >
+              Seu grande dia,
+              <span className="block italic text-[#315C4A]">
+                exatamente como sonhou.
               </span>
             </h1>
 
-            <p className="text-lg text-[#64756D] leading-relaxed mb-9">
-              Na Chuva de Arroz, transformamos sonhos em celebrações únicas.
-              Cuidamos de cada detalhe para que você aproveite cada instante.
+            <p
+              className="
+                text-lg
+                text-[#65736B]
+                leading-relaxed
+                mb-9
+                max-w-lg
+              "
+            >
+              Planejamos cada detalhe do seu casamento para que vocês possam
+              viver cada momento com tranquilidade, emoção e a certeza de que
+              tudo estará em boas mãos.
             </p>
 
+            {/* BOTÕES */}
             <div className="flex flex-wrap gap-4">
+
               <a
                 href="#servicos"
-                className="px-7 py-3.5 rounded-full bg-[#173C30] text-white font-medium hover:bg-[#2E6B55] hover:-translate-y-1 transition"
+                className="
+                  inline-flex
+                  items-center
+                  gap-3
+                  px-6 py-3.5
+                  rounded-xl
+                  bg-[#173C30]
+                  text-white
+                  font-medium
+                  hover:bg-[#315C4A]
+                  hover:-translate-y-1
+                  transition-all
+                  duration-300
+                  shadow-lg
+                "
               >
                 Conheça nossos serviços
+                <FaArrowRight className="text-sm" />
               </a>
 
               <a
-                href="#sobre"
-                className="px-7 py-3.5 rounded-full border border-[#A8C3A0] text-[#173C30] bg-white hover:bg-[#EAF3ED] transition"
+                href="#contato"
+                className="
+                  inline-flex
+                  items-center
+                  px-6 py-3.5
+                  rounded-xl
+                  border border-[#315C4A]
+                  text-[#315C4A]
+                  font-medium
+                  hover:bg-[#173C30]
+                  hover:text-white
+                  transition-all
+                  duration-300
+                "
               >
-                Conheça a Chuva de Arroz
+                Vamos conversar
               </a>
+
             </div>
+
+            {/* NÚMEROS */}
+            <div
+              className="
+                flex
+                flex-wrap
+                gap-8
+                mt-11
+                pt-8
+                border-t
+                border-[#D8E4DD]
+              "
+            >
+
+              <div>
+                <p className="text-2xl font-serif text-[#173C30]">
+                  10+
+                </p>
+
+                <p className="text-sm text-[#7A8780]">
+                  anos de experiência
+                </p>
+              </div>
+
+              <div>
+                <p className="text-2xl font-serif text-[#173C30]">
+                  150+
+                </p>
+
+                <p className="text-sm text-[#7A8780]">
+                  histórias realizadas
+                </p>
+              </div>
+
+              <div>
+                <p className="text-2xl font-serif text-[#173C30]">
+                  100%
+                </p>
+
+                <p className="text-sm text-[#7A8780]">
+                  dedicação aos noivos
+                </p>
+              </div>
+
+            </div>
+
           </div>
 
+          {/* IMAGEM */}
           <div className="relative">
-            <div className="absolute -inset-4 rounded-[2.5rem] border border-[#A8C3A0]/50 rotate-2" />
 
-            <div className="relative overflow-hidden rounded-[2rem] border-4 border-white shadow-[0_25px_70px_rgba(23,60,48,0.15)]">
+            <div
+              className="
+                absolute
+                -inset-4
+                border
+                border-[#315C4A]/20
+                rounded-[2rem]
+                rotate-2
+              "
+            />
+
+            <div
+              className="
+                relative
+                overflow-hidden
+                rounded-[2rem]
+                shadow-2xl
+                border
+                border-white
+              "
+            >
               <img
                 src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop"
-                alt="Decoração elegante de casamento"
-                className="w-full h-[520px] object-cover hover:scale-105 transition-transform duration-700"
+                alt="Casamento ao ar livre"
+                className="
+                  w-full
+                  h-[500px]
+                  md:h-[570px]
+                  object-cover
+                "
+              />
+
+              <div
+                className="
+                  absolute
+                  inset-0
+                  bg-gradient-to-t
+                  from-[#173C30]/40
+                  to-transparent
+                "
               />
             </div>
 
-            <div className="absolute -bottom-6 -left-6 bg-[#173C30] rounded-2xl px-6 py-4 shadow-xl">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#A8C3A0]">
+            {/* CARD SOBRE A FOTO */}
+            <div
+              className="
+                absolute
+                bottom-6
+                left-5
+                right-5
+                md:right-auto
+                md:max-w-sm
+                bg-white/90
+                backdrop-blur-md
+                rounded-2xl
+                px-5 py-4
+                shadow-xl
+              "
+            >
+              <p
+                className="
+                  text-xs
+                  uppercase
+                  tracking-[0.2em]
+                  text-[#65736B]
+                  mb-1
+                "
+              >
                 Chuva de Arroz
               </p>
-              <p className="text-white font-medium mt-1">
-                Celebrando histórias de amor
+
+              <p className="font-serif text-xl text-[#173C30]">
+                Momentos que ficam para sempre.
               </p>
             </div>
+
           </div>
 
         </div>
+
       </div>
     </section>
   );

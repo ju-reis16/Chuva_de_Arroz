@@ -1,64 +1,145 @@
+import {
+  FaComments,
+  FaClipboardList,
+  FaCalendarCheck,
+  FaHeart,
+} from "react-icons/fa";
+
+const etapas = [
+  {
+    id: 1,
+    numero: "01",
+    icone: <FaComments />,
+    titulo: "Vamos conversar",
+    descricao:
+      "Começamos entendendo a história de vocês, seus sonhos e tudo o que imaginam para o grande dia.",
+  },
+  {
+    id: 2,
+    numero: "02",
+    icone: <FaClipboardList />,
+    titulo: "Planejamos juntos",
+    descricao:
+      "Organizamos cada etapa, fornecedores e detalhes para construir um casamento com a identidade do casal.",
+  },
+  {
+    id: 3,
+    numero: "03",
+    icone: <FaCalendarCheck />,
+    titulo: "Cuidamos de tudo",
+    descricao:
+      "No grande dia, nossa equipe acompanha cada detalhe para que vocês possam simplesmente aproveitar.",
+  },
+];
+
 export default function Event() {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 px-4 pt-4">
-      <div
-        className="
-          max-w-7xl mx-auto
-          px-6 py-4
-          rounded-2xl
-          bg-[#FFFDFC]/90
-          backdrop-blur-xl
-          border border-[#E8DFD3]
-          shadow-[0_8px_30px_rgba(81,72,62,0.08)]
-          flex justify-between items-center
-        "
-      >
-        <a
-          href="#home"
-          className="text-2xl font-semibold tracking-wide text-[#51483E]"
-        >
-          <span className="text-[#B89B63]">Su</span>hui
-        </a>
+    <section
+      id="servicos"
+      className="py-24 bg-white"
+    >
+      <div className="max-w-7xl mx-auto px-6">
 
-        <nav className="hidden md:flex items-center gap-8 text-sm text-[#756D63]">
-          <a href="#home" className="hover:text-[#B89B63] transition">
-            Início
-          </a>
+        {/* CABEÇALHO */}
+        <div className="max-w-2xl mb-14">
 
-          <a href="#sobre" className="hover:text-[#B89B63] transition">
-            Sobre nós
-          </a>
+          <p className="text-sm uppercase tracking-[0.25em] text-[#315C4A] mb-3">
+            Nossa forma de trabalhar
+          </p>
 
-          <a href="#servicos" className="hover:text-[#B89B63] transition">
-            Serviços
-          </a>
+          <h2
+            className="
+              text-4xl
+              md:text-5xl
+              font-serif
+              text-[#173C30]
+              leading-tight
+              mb-5
+            "
+          >
+            Do primeiro sonho
+            <span className="block italic text-[#315C4A]">
+              ao grande dia.
+            </span>
+          </h2>
 
-          <a href="#momentos" className="hover:text-[#B89B63] transition">
-            Momentos
-          </a>
+          <p className="text-[#69766F] text-lg leading-relaxed">
+            Estaremos ao lado de vocês em cada etapa, tornando o planejamento
+            mais leve, organizado e especial.
+          </p>
 
-          <a href="#contato" className="hover:text-[#B89B63] transition">
-            Contato
-          </a>
-        </nav>
+        </div>
 
-        <a
-          href="#contato"
-          className="
-            hidden sm:inline-flex
-            px-5 py-2.5
-            rounded-full
-            bg-[#B89B63]
-            text-white
-            text-sm font-medium
-            hover:bg-[#A78955]
-            hover:scale-105
-            transition-all duration-300
-          "
-        >
-          Fale conosco
-        </a>
+        {/* ETAPAS */}
+        <div className="grid md:grid-cols-3 gap-7">
+
+          {etapas.map((etapa) => (
+            <div
+              key={etapa.id}
+              className="
+                group
+                relative
+                bg-[#F8FAF7]
+                border border-[#DCE7E0]
+                rounded-3xl
+                p-8
+                hover:-translate-y-2
+                hover:shadow-xl
+                hover:border-[#AFC7B9]
+                transition-all
+                duration-300
+              "
+            >
+
+              {/* NÚMERO */}
+              <div className="flex items-center justify-between mb-7">
+
+                <div
+                  className="
+                    w-14 h-14
+                    rounded-2xl
+                    bg-[#173C30]
+                    text-[#DCE9DF]
+                    flex items-center justify-center
+                    text-xl
+                    group-hover:bg-[#315C4A]
+                    transition
+                  "
+                >
+                  {etapa.icone}
+                </div>
+
+                <span className="text-5xl font-serif text-[#DCE7E0]">
+                  {etapa.numero}
+                </span>
+
+              </div>
+
+              <h3 className="text-2xl font-serif text-[#173C30] mb-3">
+                {etapa.titulo}
+              </h3>
+
+              <p className="text-[#68756E] leading-relaxed">
+                {etapa.descricao}
+              </p>
+
+            </div>
+          ))}
+
+        </div>
+
+        {/* FRASE FINAL */}
+        <div className="mt-14 flex items-center justify-center gap-3 text-[#315C4A]">
+          <FaHeart className="text-sm" />
+
+          <p className="font-serif italic text-lg">
+            Porque cada história de amor merece ser contada do seu jeito.
+          </p>
+
+          <FaHeart className="text-sm" />
+        </div>
+
       </div>
-    </header>
+    </section>
   );
 }

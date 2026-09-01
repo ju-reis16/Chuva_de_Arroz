@@ -1,141 +1,134 @@
 import { useState } from "react";
-import { FaPlus, FaMinus, FaHeart } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 
 const perguntas = [
   {
-    pergunta: "Qual é o horário da cerimônia?",
+    id: 1,
+    pergunta: "Com quanto tempo de antecedência devemos contratar a assessoria?",
     resposta:
-      "As informações sobre o horário da cerimônia estarão disponíveis no convite. Recomendamos chegar alguns minutos antes para aproveitar o momento com tranquilidade.",
+      "Recomendamos começar o planejamento com antecedência para que possamos organizar todos os detalhes com calma e encontrar as melhores opções para o casal.",
   },
   {
-    pergunta: "Onde será realizada a celebração?",
+    id: 2,
+    pergunta: "A assessoria acompanha o casal durante todo o planejamento?",
     resposta:
-      "O endereço completo e as informações sobre o local estarão disponíveis na seção de detalhes do evento.",
+      "Sim. Acompanhamos cada etapa do planejamento, ajudando nas decisões, na organização e no contato com os fornecedores.",
   },
   {
-    pergunta: "Qual traje devo usar?",
+    id: 3,
+    pergunta: "Vocês trabalham com diferentes estilos de casamento?",
     resposta:
-      "Recomendamos um traje elegante e adequado para uma celebração de casamento. Consulte as informações do convite para orientações específicas.",
+      "Sim. Cada casamento é planejado de forma personalizada, respeitando o estilo, a personalidade e os desejos de cada casal.",
   },
   {
-    pergunta: "Posso levar um acompanhante?",
+    id: 4,
+    pergunta: "A equipe acompanha o casamento no grande dia?",
     resposta:
-      "A quantidade de acompanhantes deve ser informada no formulário de confirmação de presença.",
+      "Sim. Nossa equipe acompanha a cerimônia e a celebração para cuidar dos detalhes e garantir que tudo aconteça conforme o planejamento.",
   },
   {
-    pergunta: "É necessário confirmar minha presença?",
+    id: 5,
+    pergunta: "Vocês ajudam na escolha dos fornecedores?",
     resposta:
-      "Sim. A confirmação ajuda na organização da celebração e permite preparar tudo com carinho para receber cada convidado.",
+      "Sim. Podemos orientar o casal na escolha de fornecedores que estejam de acordo com o estilo, as necessidades e o planejamento do casamento.",
   },
   {
-    pergunta: "Até quando posso confirmar minha presença?",
+    id: 6,
+    pergunta: "Como podemos solicitar um orçamento?",
     resposta:
-      "Pedimos que a confirmação seja realizada o quanto antes, respeitando a data indicada no convite.",
+      "É simples! Basta preencher nosso formulário de contato. Depois disso, entraremos em contato para conhecer melhor vocês e entender o que estão planejando.",
   },
 ];
 
-export default function FAQ() {
+export default function Perguntas() {
   const [aberta, setAberta] = useState(null);
 
-  const alternar = (index) => {
-    setAberta(aberta === index ? null : index);
+  const alternarPergunta = (id) => {
+    setAberta(aberta === id ? null : id);
   };
 
   return (
-    <section className="py-24 bg-[#F8F5F0]">
-
+    <section
+      id="faq"
+      className="py-24 bg-[#F8FAF7]"
+    >
       <div className="max-w-4xl mx-auto px-6">
 
-        {/* Cabeçalho */}
-        <div className="text-center mb-12">
+        {/* TÍTULO */}
+        <div className="text-center mb-14">
 
-          <div className="flex items-center justify-center gap-4 mb-5">
-            <span className="w-12 h-px bg-[#B89B72]" />
-            <FaHeart className="text-[#B89B72] text-sm" />
-            <span className="w-12 h-px bg-[#B89B72]" />
-          </div>
-
-          <p className="text-sm uppercase tracking-[0.3em] text-[#B89B72] mb-3">
-            Dúvidas
+          <p className="text-sm uppercase tracking-[0.25em] text-[#315C4A] mb-3">
+            Dúvidas frequentes
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-serif text-[#292721] mb-5">
-            Perguntas frequentes
+          <h2 className="text-4xl md:text-5xl font-serif text-[#173C30] mb-5">
+            Tudo o que vocês
+            <span className="block italic text-[#315C4A]">
+              precisam saber.
+            </span>
           </h2>
 
-          <p className="text-[#777169] text-lg">
-            Tudo o que você precisa saber para aproveitar esse momento.
+          <p className="text-[#69766F] text-lg">
+            Algumas respostas para ajudar vocês durante o planejamento.
           </p>
 
         </div>
 
-        {/* Perguntas */}
+        {/* PERGUNTAS */}
         <div className="space-y-4">
 
-          {perguntas.map((item, index) => {
-            const estaAberta = aberta === index;
+          {perguntas.map((item) => {
+            const estaAberta = aberta === item.id;
 
             return (
               <div
-                key={index}
+                key={item.id}
                 className="
                   bg-white
-                  border border-[#E5DDD4]
+                  border border-[#DCE7E0]
                   rounded-2xl
                   overflow-hidden
-                  shadow-[0_8px_25px_rgba(41,39,33,0.04)]
+                  transition-all
+                  duration-300
                 "
               >
-
                 <button
-                  type="button"
-                  onClick={() => alternar(index)}
+                  onClick={() => alternarPergunta(item.id)}
                   className="
                     w-full
-                    flex items-center justify-between
+                    flex
+                    items-center
+                    justify-between
                     gap-5
-                    p-6
                     text-left
-                    hover:bg-[#FCFAF7]
+                    px-6 py-5
+                    text-[#173C30]
+                    hover:bg-[#F8FAF7]
                     transition
                   "
                 >
-
-                  <span className="font-medium text-[#292721]">
+                  <span className="font-medium text-lg">
                     {item.pergunta}
                   </span>
 
-                  <span
-                    className="
-                      shrink-0
-                      w-9 h-9
-                      rounded-full
-                      bg-[#F8F5F0]
-                      flex items-center justify-center
-                      text-[#B89B72]
-                    "
-                  >
-                    {estaAberta ? (
-                      <FaMinus className="text-xs" />
-                    ) : (
-                      <FaPlus className="text-xs" />
-                    )}
-                  </span>
-
+                  <FaChevronDown
+                    className={`
+                      flex-shrink-0
+                      text-[#315C4A]
+                      transition-transform
+                      duration-300
+                      ${estaAberta ? "rotate-180" : ""}
+                    `}
+                  />
                 </button>
 
                 {estaAberta && (
                   <div className="px-6 pb-6">
-
-                    <div className="h-px bg-[#E5DDD4] mb-5" />
-
-                    <p className="text-[#777169] leading-relaxed">
+                    <p className="text-[#69766F] leading-relaxed border-t border-[#E5ECE7] pt-4">
                       {item.resposta}
                     </p>
-
                   </div>
                 )}
-
               </div>
             );
           })}
@@ -143,7 +136,6 @@ export default function FAQ() {
         </div>
 
       </div>
-
     </section>
   );
 }
