@@ -14,7 +14,6 @@ export default function Hero() {
         flex items-center
       "
     >
-      {/* Decorações */}
       <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#DCE9DF]/70 rounded-full blur-3xl" />
 
       <div className="absolute -bottom-40 -left-40 w-[450px] h-[450px] bg-[#BFD4C8]/40 rounded-full blur-3xl" />
@@ -56,7 +55,7 @@ export default function Hero() {
               tudo estará em boas mãos.
             </p>
 
-            {/* BOTÕES */}
+            
             <div className="flex flex-wrap gap-4">
 
               <a
@@ -103,7 +102,6 @@ export default function Hero() {
             </div>
 
           </div>
-          {/* IMAGEM */}
           <div className="relative">
 
             <div
@@ -128,7 +126,7 @@ export default function Hero() {
               "
             >
               <img
-                src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop"
+                src="https://i.pinimg.com/1200x/08/8b/68/088b685a0afc10e27d61d21e2bd04b84.jpg"
                 alt="Casamento ao ar livre"
                 className="
                   w-full

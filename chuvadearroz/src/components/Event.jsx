@@ -68,8 +68,6 @@ export default function Event() {
           </p>
 
         </div>
-
-        {/* ETAPAS */}
         <div className="grid md:grid-cols-3 gap-7">
 
           {etapas.map((etapa) => (
@@ -90,7 +88,6 @@ export default function Event() {
               "
             >
 
-              {/* NÚMERO */}
               <div className="flex items-center justify-between mb-7">
 
                 <div

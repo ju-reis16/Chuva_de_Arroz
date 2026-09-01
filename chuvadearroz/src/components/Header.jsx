@@ -33,7 +33,7 @@ export default function Header() {
           "
         >
 
-          {/* LOGO */}
+         
           <Link
             to="/"
             onClick={fecharMenu}
@@ -50,7 +50,7 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* MENU DESKTOP */}
+         
           <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {links.map((link) => (
               <Link
@@ -79,7 +79,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* BOTÃO */}
           <Link
             to="/contato"
             className="
@@ -123,7 +122,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* MENU MOBILE */}
+      
         {menuAberto && (
           <nav
             className="

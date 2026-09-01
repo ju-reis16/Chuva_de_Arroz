@@ -7,7 +7,7 @@ export default function CTA() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="relative overflow-hidden rounded-[2rem] min-h-[480px] flex items-center justify-center">
           <img
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1600"
+            src="https://i.pinimg.com/1200x/bb/f5/6a/bbf56a422583a2c4cdab431039eda76b.jpg"
             alt="Casamento"
             className="absolute inset-0 w-full h-full object-cover"
           />

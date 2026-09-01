@@ -14,7 +14,7 @@ const casamentos = [
     descricao:
       "Uma celebração ao ar livre, cercada pela natureza e por momentos especiais.",
     imagem:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1000&auto=format&fit=crop",
+      "https://i.pinimg.com/736x/d2/77/33/d2773312c8e47a3247a3e15f425e02f4.jpg",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const casamentos = [
     descricao:
       "Uma celebração elegante, com detalhes clássicos e uma atmosfera sofisticada.",
     imagem:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop",
+      "https://i.pinimg.com/736x/75/63/4d/75634d2360f7274ee9444101de45d29e.jpg",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const casamentos = [
     descricao:
       "Um casamento inesquecível em um destino especial, planejado para cada detalhe.",
     imagem:
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1000&auto=format&fit=crop",
+      "https://i.pinimg.com/1200x/03/59/1f/03591fc54795e32bdaaa2b256da55307.jpg",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const casamentos = [
     descricao:
       "Uma celebração leve e romântica com o mar como cenário.",
     imagem:
-      "https://images.unsplash.com/photo-1507504031003-b417219a0fde?q=80&w=1000&auto=format&fit=crop",
+      "https://i.pinimg.com/1200x/b1/85/4d/b1854d42411a864b8dbb9f726a32bf6e.jpg",
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ const casamentos = [
     descricao:
       "Uma celebração intimista, planejada para reunir as pessoas mais importantes.",
     imagem:
-      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000&auto=format&fit=crop",
+      "https://i.pinimg.com/736x/44/30/50/443050bd83f003fa68604e8f44effefd.jpg",
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ const casamentos = [
     descricao:
       "Uma celebração moderna, elegante e cheia de personalidade.",
     imagem:
-      "https://images.unsplash.com/photo-1509927083803-4bd519298ac4?q=80&w=1000&auto=format&fit=crop",
+      "https://i.pinimg.com/1200x/da/17/5c/da175c247534ea539a2d8090c7fd95a8.jpg",
   },
 ];
 

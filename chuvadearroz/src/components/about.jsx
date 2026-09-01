@@ -33,19 +33,17 @@ export default function About() {
   return (
     <section id="sobre" className="bg-white">
 
-      {/* INTRODUÇÃO */}
       <div className="max-w-7xl mx-auto px-6 py-24">
 
         <div className="grid lg:grid-cols-12 gap-10 items-center">
 
-          {/* IMAGEM */}
           <div className="lg:col-span-6 relative">
 
             <div className="absolute -left-5 -bottom-5 w-32 h-32 rounded-full bg-[#DCE9DF]/60 blur-2xl" />
 
             <div className="relative h-[550px] overflow-hidden rounded-[2.5rem]">
               <img
-                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop"
+                src="https://weddingitaly.s3.amazonaws.com/system/images/image_files/000/030/451/big/0544.jpg?1637336041"
                 alt="Noivos celebrando o casamento"
                 className="w-full h-full object-cover"
               />
