@@ -61,7 +61,7 @@ export default function About() {
               </div>
 
               <div className="p-6 rounded-2xl bg-[#EAF3ED] border border-[#C9DED1]">
-                <span className="text-2xl text-[#2E6B55]">♡</span>
+                <span className="text-2xl text-[#2E6B55]">✦</span>
 
                 <h4 className="font-semibold text-[#173C30] mt-3 mb-2">
                   Nossa essência

@@ -1,82 +1,90 @@
-const fotos = [
+import { FaArrowRight } from "react-icons/fa";
+
+const momentos = [
   {
+    id: 1,
+    titulo: "Cerimônias inesquecíveis",
     imagem:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=900",
-    titulo: "Um dia para lembrar"
+      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
   },
   {
+    id: 2,
+    titulo: "Detalhes que encantam",
     imagem:
-      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=900",
-    titulo: "Celebrações únicas"
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop",
   },
   {
+    id: 3,
+    titulo: "Celebrações únicas",
     imagem:
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900",
-    titulo: "Detalhes especiais"
+      "https://images.unsplash.com/photo-1507504031003-b417219a0fde?q=80&w=1200&auto=format&fit=crop",
   },
   {
+    id: 4,
+    titulo: "Amor em cada detalhe",
     imagem:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900",
-    titulo: "Momentos inesquecíveis"
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop",
   },
-  {
-    imagem:
-      "https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=900",
-    titulo: "Amor em cada detalhe"
-  },
-  {
-    imagem:
-      "https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=900",
-    titulo: "Sonhos realizados"
-  }
 ];
 
-export default function Portfolio() {
+export default function Prtifolio() {
   return (
     <section
       id="portfolio"
-      className="py-24 bg-[#E8F0E6]"
+      className="py-24 bg-[#173C30] relative overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      {/* Decorações */}
+      <div className="absolute -top-40 -right-40 w-96 h-96 bg-[#AFC7B9]/10 rounded-full blur-3xl" />
 
-        <div className="text-center max-w-2xl mx-auto mb-14">
+      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-[#DCE9DF]/10 rounded-full blur-3xl" />
 
-          <p className="text-sm uppercase tracking-[0.3em] text-[#527A63] mb-3">
-            Portfólio
-          </p>
+      <div className="relative max-w-7xl mx-auto px-6">
 
-          <h2 className="text-4xl md:text-5xl font-serif text-[#25483A] mb-5">
-            Histórias que ajudamos a contar
-          </h2>
+        {/* TÍTULO */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
 
-          <p className="text-[#68736C] leading-relaxed">
-            Alguns momentos especiais que mostram um pouco
-            do nosso trabalho.
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.25em] text-[#BFD4C8] mb-3">
+              Nossos momentos
+            </p>
+
+            <h2 className="text-4xl md:text-5xl font-serif text-white leading-tight">
+              Histórias que merecem
+              <span className="block italic text-[#DCE9DF]">
+                ser lembradas.
+              </span>
+            </h2>
+          </div>
+
+          <p className="max-w-md text-white/65 leading-relaxed">
+            Cada casamento possui uma história única. Nós cuidamos dos
+            detalhes para transformar sonhos em momentos inesquecíveis.
           </p>
 
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* IMAGENS */}
+        <div className="grid md:grid-cols-2 gap-6">
 
-          {fotos.map((foto, index) => (
+          {momentos.map((momento) => (
             <div
-              key={index}
+              key={momento.id}
               className="
                 group
                 relative
                 overflow-hidden
-                rounded-3xl
-                aspect-[4/5]
-                bg-white
+                rounded-[2rem]
+                border border-white/10
+                shadow-xl
               "
             >
 
               <img
-                src={foto.imagem}
-                alt={foto.titulo}
+                src={momento.imagem}
+                alt={momento.titulo}
                 className="
                   w-full
-                  h-full
+                  h-[320px] md:h-[380px]
                   object-cover
                   group-hover:scale-105
                   transition-transform
@@ -84,43 +92,54 @@ export default function Portfolio() {
                 "
               />
 
+              {/* Gradiente */}
               <div
                 className="
                   absolute
                   inset-0
                   bg-gradient-to-t
-                  from-[#25483A]/80
+                  from-[#173C30]/90
                   via-transparent
                   to-transparent
-                  opacity-0
-                  group-hover:opacity-100
-                  transition
                 "
               />
 
-              <div
-                className="
-                  absolute
-                  bottom-6
-                  left-6
-                  right-6
-                  text-white
-                  translate-y-4
-                  opacity-0
-                  group-hover:translate-y-0
-                  group-hover:opacity-100
-                  transition
-                "
-              >
-                <h3 className="text-xl font-serif">
-                  {foto.titulo}
-                </h3>
+              {/* Texto */}
+              <div className="absolute bottom-0 left-0 right-0 p-7">
+
+                <div className="flex items-center justify-between gap-4">
+
+                  <h3 className="text-2xl font-serif text-white">
+                    {momento.titulo}
+                  </h3>
+
+                  <div
+                    className="
+                      flex-shrink-0
+                      w-11 h-11
+                      rounded-full
+                      bg-white/15
+                      backdrop-blur-md
+                      border border-white/20
+                      flex items-center justify-center
+                      text-white
+                      group-hover:bg-[#DCE9DF]
+                      group-hover:text-[#173C30]
+                      transition
+                    "
+                  >
+                    <FaArrowRight className="text-sm -rotate-45" />
+                  </div>
+
+                </div>
+
               </div>
 
             </div>
           ))}
 
         </div>
+
       </div>
     </section>
   );

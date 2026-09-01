@@ -1,93 +1,91 @@
-const depoimentos = [
+const avaliacoes = [
   {
-    nome: "Mariana & Lucas",
+    id: 1,
+    nome: "Mariana e Lucas",
     texto:
-      "A Chuva de Arroz conseguiu transformar tudo o que imaginávamos em realidade. Cada detalhe estava perfeito.",
+      "A Chuva de Arroz tornou nosso casamento ainda mais especial. Tivemos tranquilidade para aproveitar cada momento sabendo que tudo estava sendo cuidado.",
+    evento: "Casamento em Vinhedo",
   },
   {
-    nome: "Ana & Gabriel",
+    id: 2,
+    nome: "Beatriz e Rafael",
     texto:
-      "Desde o primeiro contato fomos tratados com muito carinho. Nosso casamento foi exatamente como sonhamos.",
+      "Desde o primeiro contato, sentimos que nossos sonhos estavam em boas mãos. Cada detalhe ficou exatamente como imaginávamos.",
+    evento: "Casamento ao ar livre",
   },
   {
-    nome: "Beatriz & Rafael",
+    id: 3,
+    nome: "Camila e André",
     texto:
-      "Ter uma equipe cuidando de tudo fez toda a diferença. Conseguimos aproveitar cada segundo do nosso grande dia.",
-  }
+      "Foi incrível ter uma equipe tão atenciosa ao nosso lado. O planejamento foi leve, organizado e o resultado foi inesquecível.",
+    evento: "Cerimônia e recepção",
+  },
 ];
 
-export default function Depoimentos() {
+export default function Avaliacoes() {
   return (
     <section
-      id="depoimentos"
-      className="py-24 bg-[#F7AFAF8]"
+      id="avaliacoes"
+      className="py-24 bg-[#F8FAF7]"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
 
+        {/* Título */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-
-          <p className="text-sm uppercase tracking-[0.3em] text-[#527A63] mb-3">
-            Depoimentos
+          <p className="text-sm uppercase tracking-[0.25em] text-[#315C4A] mb-3">
+            Histórias reais
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-serif text-[#25483A] mb-5">
-            Histórias de quem confiou em nós
+          <h2 className="text-4xl md:text-5xl font-serif text-[#18382C] mb-5">
+            O que nossos casais dizem
           </h2>
 
-          <p className="text-[#68736C]">
-            Cada casal tem uma história. E é uma alegria fazer parte dela.
+          <p className="text-[#66736C] text-lg leading-relaxed">
+            Cada casamento é único. E não há nada melhor do que ouvir de quem
+            viveu esse momento com a gente.
           </p>
-
         </div>
 
+        {/* Cards */}
         <div className="grid md:grid-cols-3 gap-7">
-
-          {depoimentos.map((item, index) => (
+          {avaliacoes.map((avaliacao) => (
             <div
-              key={index}
+              key={avaliacao.id}
               className="
                 bg-white
-                border border-[#DCE5DC]
+                border border-[#DCE7E0]
                 rounded-3xl
                 p-8
                 shadow-sm
-                hover:shadow-lg
-                transition
+                hover:-translate-y-2
+                hover:shadow-xl
+                hover:border-[#AFC7B9]
+                transition-all
+                duration-300
               "
             >
-
-              <div className="text-[#527A63] text-lg mb-5">
-                ★★★★★
+              {/* Aspas */}
+              <div className="text-5xl font-serif text-[#315C4A] mb-4">
+                “
               </div>
 
-              <p className="text-[#68736C] leading-relaxed italic mb-7">
-                “{item.texto}”
+              <p className="text-[#59665F] leading-relaxed mb-7">
+                {avaliacao.texto}
               </p>
 
-              <div className="flex items-center gap-3">
+              <div className="border-t border-[#E5ECE7] pt-5">
+                <h3 className="font-semibold text-lg text-[#18382C]">
+                  {avaliacao.nome}
+                </h3>
 
-                <div
-                  className="
-                    w-10 h-10
-                    rounded-full
-                    bg-[#E8F0E6]
-                    flex items-center justify-center
-                    text-[#527A63]
-                  "
-                >
-                  ♥
-                </div>
-
-                <p className="font-semibold text-[#25483A]">
-                  {item.nome}
+                <p className="text-sm text-[#809087] mt-1">
+                  {avaliacao.evento}
                 </p>
-
               </div>
-
             </div>
           ))}
-
         </div>
+
       </div>
     </section>
   );
