@@ -121,53 +121,7 @@ export default function Hero() {
 
             </div>
 
-            {/* NÚMEROS */}
-            <div
-              className="
-                flex
-                flex-wrap
-                gap-8
-                mt-11
-                pt-8
-                border-t
-                border-[#D8E4DD]
-              "
-            >
-
-              <div>
-                <p className="text-2xl font-serif text-[#173C30]">
-                  10+
-                </p>
-
-                <p className="text-sm text-[#7A8780]">
-                  anos de experiência
-                </p>
-              </div>
-
-              <div>
-                <p className="text-2xl font-serif text-[#173C30]">
-                  150+
-                </p>
-
-                <p className="text-sm text-[#7A8780]">
-                  histórias realizadas
-                </p>
-              </div>
-
-              <div>
-                <p className="text-2xl font-serif text-[#173C30]">
-                  100%
-                </p>
-
-                <p className="text-sm text-[#7A8780]">
-                  dedicação aos noivos
-                </p>
-              </div>
-
-            </div>
-
           </div>
-
           {/* IMAGEM */}
           <div className="relative">
 
