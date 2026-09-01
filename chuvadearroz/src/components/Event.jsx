@@ -1,8 +1,7 @@
 import {
   FaComments,
   FaClipboardList,
-  FaCalendarCheck,
-  FaHeart,
+  FaCalendarCheck
 } from "react-icons/fa";
 
 const etapas = [
@@ -127,18 +126,6 @@ export default function Event() {
           ))}
 
         </div>
-
-        {/* FRASE FINAL */}
-        <div className="mt-14 flex items-center justify-center gap-3 text-[#315C4A]">
-          <FaHeart className="text-sm" />
-
-          <p className="font-serif italic text-lg">
-            Porque cada história de amor merece ser contada do seu jeito.
-          </p>
-
-          <FaHeart className="text-sm" />
-        </div>
-
       </div>
     </section>
   );
