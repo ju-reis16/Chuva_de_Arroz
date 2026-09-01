@@ -1,4 +1,5 @@
 import { FaArrowRight, FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -100,8 +101,8 @@ export default function Hero() {
                 <FaArrowRight className="text-sm" />
               </a>
 
-              <a
-                href="#contato"
+              <Link
+                to="/contato"
                 className="
                   inline-flex
                   items-center
@@ -117,7 +118,7 @@ export default function Hero() {
                 "
               >
                 Vamos conversar
-              </a>
+              </Link>
 
             </div>
 

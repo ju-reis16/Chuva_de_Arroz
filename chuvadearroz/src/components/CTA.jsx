@@ -1,4 +1,5 @@
 import { FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function CTA() {
   return (
@@ -30,12 +31,12 @@ export default function CTA() {
               transformar seus sonhos em uma celebração única.
             </p>
 
-            <a
-              href="#contato"
+            <Link
+             to="/contato"
               className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl bg-[#A8C3A0] text-[#25483A] font-semibold hover:bg-white transition"
             >
               Vamos conversar
-            </a>
+            </Link>
           </div>
         </div>
       </div>

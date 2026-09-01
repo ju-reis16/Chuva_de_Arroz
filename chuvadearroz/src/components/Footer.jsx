@@ -4,6 +4,7 @@ import {
   FaHeart,
   FaArrowUp,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 export default function Footer() {
   const voltarAoTopo = () => {
     window.scrollTo({
@@ -102,8 +103,8 @@ export default function Footer() {
               Estamos prontas para conhecer a história de vocês.
             </p>
 
-            <a
-              href="#contato"
+            <Link
+              to="/contato"
               className="
                 inline-flex
                 px-5 py-3
@@ -116,7 +117,7 @@ export default function Footer() {
               "
             >
               Entrar em contato
-            </a>
+            </Link>
 
             <div className="flex gap-3 mt-6">
 

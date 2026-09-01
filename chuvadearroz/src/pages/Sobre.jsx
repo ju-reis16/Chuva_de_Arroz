@@ -7,6 +7,8 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import Header from "../components/Header";
+import Footer from '../components/Footer'
+import { Link } from "react-router-dom";
 
 const valores = [
   {
@@ -39,7 +41,7 @@ const valores = [
   },
 ];
 
-function Sobre({ onNavigate }) {
+function Sobre() {
   return (
     <main className="min-h-screen bg-[#fbfaf4] font-sans text-[#254238]">
       <Header />
@@ -276,16 +278,17 @@ function Sobre({ onNavigate }) {
               sonho em realidade.
             </p>
 
-            <button
-              onClick={() => onNavigate("contato")}
+            <Link
+              to="/contato"
               className="mt-8 inline-flex items-center gap-3 bg-[#254c3b] px-6 py-3 font-sans text-sm font-medium text-white cursor-pointer hover:bg-[#1a3629] transition-colors"
             >
               Entre em contato
               <FaArrowRight className="text-xs transition-transform group-hover:translate-x-1" />
-            </button>
+            </Link>
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

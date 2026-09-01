@@ -8,6 +8,7 @@ import {
   FaHeart,
   FaPaperPlane,
 } from "react-icons/fa";
+import Footer from '../components/Footer';
 
 import Header from "../components/Header";
 
@@ -379,6 +380,7 @@ function Contato() {
             </div>
           </div>
         </section>
+		<Footer/>
       </main>
     </>
   );
