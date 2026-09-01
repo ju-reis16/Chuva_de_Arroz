@@ -7,7 +7,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import Header from "../components/Header";
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 const valores = [
@@ -45,20 +45,19 @@ function Sobre() {
   return (
     <main className="min-h-screen bg-[#fbfaf4] font-sans text-[#254238]">
       <Header />
+
       {/* HERO */}
       <section className="bg-[#dcecdf] px-6 py-16 md:px-12">
         <div className="mx-auto max-w-5xl">
           <div className="max-w-2xl">
-            <div className="mb-4 mt-15 font-sans text-sm font-semibold text-[#6d9b7d]">
+            <div className="mb-4 mt-15 font-sans text-sm font-semibold text-[#b76e79]">
               Sobre nós
             </div>
 
             <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
               Conheça o
               <br />
-              <span className="text-[#254c3b]">
-                Chuva de Arroz
-              </span>
+              <span className="text-[#254c3b]">Chuva de Arroz</span>
             </h1>
 
             <p className="mt-6 max-w-xl font-sans text-base leading-7 text-[#687b70]">
@@ -67,17 +66,15 @@ function Sobre() {
             </p>
           </div>
         </div>
-
       </section>
 
       {/* HISTÓRIA */}
       <section className="bg-[#fbfaf4] px-6 py-16 md:px-12">
         <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-2 md:items-center">
-          {/* BLOCO VISUAL */}
           <div className="relative">
             <div className="flex h-72 items-center justify-center bg-[#dcecdf] md:h-96">
               <div className="relative z-10 text-center">
-                <FaHeart className="mx-auto text-4xl text-[#6d9b7d]" />
+                <FaHeart className="mx-auto text-4xl text-[#b76e79]" />
 
                 <h2 className="mt-4 text-3xl font-semibold text-[#254c3b]">
                   Chuva de Arroz
@@ -90,9 +87,8 @@ function Sobre() {
             </div>
           </div>
 
-          {/* TEXTO */}
           <div>
-            <span className="font-sans text-sm font-semibold text-[#6d9b7d]">
+            <span className="font-sans text-sm font-semibold text-[#b76e79]">
               Nossa história
             </span>
 
@@ -137,7 +133,7 @@ function Sobre() {
         <div className="mx-auto max-w-5xl">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
-              <span className="font-sans text-sm font-semibold text-[#6d9b7d]">
+              <span className="font-sans text-sm font-semibold text-[#b76e79]">
                 Nossa missão
               </span>
 
@@ -171,7 +167,7 @@ function Sobre() {
       <section className="bg-[#fbfaf4] px-6 py-16 md:px-12">
         <div className="mx-auto max-w-5xl">
           <div className="max-w-2xl">
-            <span className="font-sans text-sm font-semibold text-[#6d9b7d]">
+            <span className="font-sans text-sm font-semibold text-[#b76e79]">
               O que acreditamos
             </span>
 
@@ -191,7 +187,7 @@ function Sobre() {
                 key={valor.id}
                 className="border border-[#d7e3d8] bg-white p-5"
               >
-                <div className="flex h-10 w-10 items-center justify-center bg-[#dcecdf] text-[#6d9b7d]">
+                <div className="flex h-10 w-10 items-center justify-center bg-[#f3dfe2] text-[#b76e79]">
                   {valor.icone}
                 </div>
 
@@ -219,11 +215,11 @@ function Sobre() {
       <section className="border-y border-[#d7e3d8] bg-[#fbfaf4] px-6 py-16 md:px-12">
         <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2 md:items-center">
           <div>
-            <div className="flex h-14 w-14 items-center justify-center bg-[#dcecdf] text-xl text-[#6d9b7d]">
+            <div className="flex h-14 w-14 items-center justify-center bg-[#f3dfe2] text-xl text-[#b76e79]">
               <FaUsers />
             </div>
 
-            <span className="mt-5 block font-sans text-sm font-semibold text-[#6d9b7d]">
+            <span className="mt-5 block font-sans text-sm font-semibold text-[#b76e79]">
               Quem está por trás
             </span>
 
@@ -248,9 +244,7 @@ function Sobre() {
               soluções que facilitem o planejamento.
             </p>
 
-            <div className="mt-6 flex items-start gap-3 border-l-2 border-[#6d9b7d] pl-4">
-              
-
+            <div className="mt-6 flex items-start gap-3 border-l-2 border-[#b76e79] pl-4">
               <p className="font-sans text-base font-medium leading-7 text-[#254238]">
                 Mais do que uma equipe, somos pessoas comprometidas em ajudar
                 cada casal a transformar seus sonhos em momentos reais e
@@ -265,7 +259,7 @@ function Sobre() {
       <section className="bg-[#dcecdf] px-6 py-16 md:px-12">
         <div className="mx-auto max-w-3xl text-center">
           <div className="px-4 py-8">
-            <FaHeart className="mx-auto text-[#6d9b7d]" />
+            <FaHeart className="mx-auto text-[#b76e79]" />
 
             <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-4xl">
               Seu grande dia começa
@@ -283,11 +277,12 @@ function Sobre() {
               className="mt-8 inline-flex items-center gap-3 bg-[#254c3b] px-6 py-3 font-sans text-sm font-medium text-white cursor-pointer hover:bg-[#1a3629] transition-colors"
             >
               Entre em contato
-              <FaArrowRight className="text-xs transition-transform group-hover:translate-x-1" />
+              <FaArrowRight className="text-xs" />
             </Link>
           </div>
         </div>
       </section>
+
       <Footer />
     </main>
   );

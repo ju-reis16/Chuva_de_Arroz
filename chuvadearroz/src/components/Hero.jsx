@@ -1,4 +1,4 @@
-import { FaArrowRight, FaHeart } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
@@ -23,27 +23,7 @@ export default function Hero() {
 
         <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-          {/* TEXTO */}
           <div className="max-w-xl">
-
-            <div
-              className="
-                inline-flex
-                items-center
-                gap-2
-                px-4 py-2
-                rounded-full
-                bg-white
-                border border-[#D8E4DD]
-                text-[#315C4A]
-                text-sm
-                mb-7
-                shadow-sm
-              "
-            >
-              <FaHeart className="text-[#315C4A] text-xs" />
-              Assessoria & Cerimonial
-            </div>
 
             <h1
               className="
@@ -169,7 +149,7 @@ export default function Hero() {
               />
             </div>
 
-            {/* CARD SOBRE A FOTO */}
+            {/* card na foto */}
             <div
               className="
                 absolute
