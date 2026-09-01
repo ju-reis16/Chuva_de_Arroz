@@ -4,7 +4,6 @@ import {
   FaHeart,
   FaArrowUp,
 } from "react-icons/fa";
-
 export default function Footer() {
   const voltarAoTopo = () => {
     window.scrollTo({
@@ -19,7 +18,6 @@ export default function Footer() {
       className="bg-[#173C30] text-white"
     >
       <div className="max-w-7xl mx-auto px-6 py-16">
-
         <div className="grid md:grid-cols-3 gap-12">
 
           {/* MARCA */}
@@ -36,33 +34,26 @@ export default function Footer() {
               >
                 <FaHeart className="text-[#173C30]" />
               </div>
-
               <div>
                 <h3 className="text-2xl font-serif">
                   Chuva de Arroz
                 </h3>
-
                 <p className="text-[9px] uppercase tracking-[0.2em] text-white/50">
                   Assessoria & Cerimonial
                 </p>
               </div>
-
             </div>
-
             <p className="text-white/60 leading-relaxed max-w-sm">
               Cuidamos dos detalhes para que vocês possam viver o amor,
               celebrar cada momento e guardar memórias para sempre.
             </p>
           </div>
-
           {/* NAVEGAÇÃO */}
           <div>
             <h4 className="font-semibold text-lg mb-5">
               Navegação
             </h4>
-
             <div className="flex flex-col gap-3">
-
               <a
                 href="#inicio"
                 className="text-white/60 hover:text-white transition"
@@ -76,39 +67,32 @@ export default function Footer() {
               >
                 Sobre nós
               </a>
-
               <a
                 href="#servicos"
                 className="text-white/60 hover:text-white transition"
               >
                 Serviços
               </a>
-
               <a
                 href="#portfolio"
                 className="text-white/60 hover:text-white transition"
               >
                 Momentos
               </a>
-
               <a
                 href="#avaliacoes"
                 className="text-white/60 hover:text-white transition"
               >
                 Avaliações
               </a>
-
               <a
                 href="#faq"
                 className="text-white/60 hover:text-white transition"
               >
                 Perguntas frequentes
               </a>
-
             </div>
           </div>
-
-          {/* REDES */}
           <div>
             <h4 className="font-semibold text-lg mb-5">
               Vamos conversar
@@ -181,7 +165,6 @@ export default function Footer() {
           <p className="text-sm text-white/40">
             © 2026 Chuva de Arroz. Todos os direitos reservados.
           </p>
-
           <button
             onClick={voltarAoTopo}
             className="
