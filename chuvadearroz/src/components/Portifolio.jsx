@@ -5,25 +5,25 @@ const momentos = [
     id: 1,
     titulo: "Cerimônias inesquecíveis",
     imagem:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
+      "https://i.pinimg.com/1200x/f8/41/17/f84117277261ed1702a2e3ac0f25703d.jpg",
   },
   {
     id: 2,
     titulo: "Detalhes que encantam",
     imagem:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop",
+      "https://i.pinimg.com/736x/d5/24/c7/d524c7e7d576db20e7e01a0a6abd5a68.jpg",
   },
   {
     id: 3,
     titulo: "Celebrações únicas",
     imagem:
-      "https://images.unsplash.com/photo-1507504031003-b417219a0fde?q=80&w=1200&auto=format&fit=crop",
+      "https://i.pinimg.com/1200x/42/fe/6e/42fe6ebe5b14f27909f296f8208fcc92.jpg",
   },
   {
     id: 4,
     titulo: "Amor em cada detalhe",
     imagem:
-      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop",
+      "https://i.pinimg.com/1200x/fa/09/1c/fa091c85d5ccd83ef28568157f186dd7.jpg",
   },
 ];
 
